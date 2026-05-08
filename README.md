@@ -11,6 +11,7 @@ Cada skill extiende las capacidades de Claude Code con comportamientos específi
 | Skill | Comando | Descripción |
 |-------|---------|-------------|
 | [skills](skills/skills/) | `/skills` | Lista todos tus skills instalados con descripción en español |
+| [memory](skills/memory/) | `/memory save` / `/memory load` | Guarda y restaura el contexto de una sesión para no perder el progreso |
 
 ---
 

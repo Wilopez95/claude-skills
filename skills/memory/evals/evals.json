@@ -1,0 +1,93 @@
+{
+  "skill_name": "memory",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We just finished a long session working on the portfolio site. We added a dark mode toggle to the navbar, decided to use localStorage over cookies (because the app is static and we don't want backend deps), and modified app/layout.tsx and components/Navbar.tsx. We still need to add a theme provider and write tests. Save our progress.",
+      "expected_output": "A .claude-memory.md file is created with a timestamped entry capturing: goal (dark mode toggle), status (in-progress), decisions (localStorage over cookies + reason), files (layout.tsx, Navbar.tsx), and next steps (theme provider + tests).",
+      "files": [],
+      "assertions": [
+        {
+          "id": "file_created",
+          "text": "The .claude-memory.md file exists in outputs/"
+        },
+        {
+          "id": "status_in_progress",
+          "text": "The entry contains 'in-progress' as the status"
+        },
+        {
+          "id": "decision_with_reason",
+          "text": "localStorage is mentioned alongside a reason (static / no backend)"
+        },
+        {
+          "id": "files_captured",
+          "text": "Both layout.tsx and Navbar.tsx appear in the entry"
+        },
+        {
+          "id": "next_steps_complete",
+          "text": "Next steps mention theme provider AND tests"
+        },
+        {
+          "id": "compact_entry",
+          "text": "The memory entry body (excluding header) is under 300 words"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Load memory — I want to continue working on this project from where we left off.",
+      "expected_output": "Claude reads .claude-memory.md, outputs a clear resume briefing with: last session date, goal, status, key decisions, files touched, and a next-steps checklist. Ends with a prompt to continue.",
+      "files": [],
+      "assertions": [
+        {
+          "id": "response_produced",
+          "text": "A response.md file was produced with substantive content (over 50 words)"
+        },
+        {
+          "id": "mentions_goal",
+          "text": "The briefing mentions the dark mode toggle goal"
+        },
+        {
+          "id": "next_steps_listed",
+          "text": "All three next steps (ThemeProvider, tests, WCAG check) are mentioned"
+        },
+        {
+          "id": "decision_surfaced",
+          "text": "The localStorage decision is explicitly mentioned in the briefing"
+        },
+        {
+          "id": "resume_invitation",
+          "text": "The briefing ends with an invitation to continue (question or offer to proceed)"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "We had a rough session today. We were trying to fix a TypeScript error in src/api/auth.ts — the req.user type wasn't being recognized. We tried module augmentation but it broke the build. Still unresolved. We also added a /health endpoint in src/api/routes.ts which worked fine. Save this.",
+      "expected_output": "Entry is appended with status 'blocked', the TS error is logged as unresolved under Errors, the health endpoint is logged under Files, and Next steps captures 'resolve req.user type error'.",
+      "files": [],
+      "assertions": [
+        {
+          "id": "file_created",
+          "text": "The .claude-memory.md file exists in outputs/"
+        },
+        {
+          "id": "status_blocked",
+          "text": "The entry status is 'blocked'"
+        },
+        {
+          "id": "error_unresolved",
+          "text": "The TS/req.user error is present and marked as unresolved"
+        },
+        {
+          "id": "both_files_captured",
+          "text": "Both auth.ts and routes.ts appear in the entry"
+        },
+        {
+          "id": "next_step_ts_error",
+          "text": "Next steps include resolving the TypeScript / req.user type issue"
+        }
+      ]
+    }
+  ]
+}
