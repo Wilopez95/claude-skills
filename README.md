@@ -16,6 +16,7 @@ Cada skill extiende las capacidades de Claude Code con comportamientos específi
 | [token-optimizer](skills/token-optimizer/) | Dev Tools | `/token-optimizer` | Audita y optimiza el uso de contexto en Claude Code; recupera entre 5–25% del context window |
 | [skill-creator](skills/skill-creator/) | Meta | `/skill-creator` | Crea, mejora y evalúa skills; incluye loop de evals, benchmarks y optimización de descripción |
 | [ui-ux-pro-max](skills/ui-ux-pro-max/) | Diseño | `/ui-ux-pro-max` | Inteligencia de diseño UI/UX: 67 estilos, 96 paletas, 57 pairings, 13 stacks (React, Next.js, Tailwind, etc.) |
+| [frontend-design](skills/frontend-design/) | Diseño | `/frontend-design` | Genera interfaces frontend de calidad de producción con estética distintiva; evita el look genérico de IA |
 
 ---
 
